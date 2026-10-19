@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Technology &amp; Architecture | Exxomatic High-Throughput IoT</title>
+  <meta name="description" content="Explore Exxomatic technology stack: CAN-J1939 protocol decoders, edge computing firmware, high-throughput cloud ingestion workers, and military-grade encryption.">
+  <meta name="keywords" content="CAN-J1939, telematics architecture, IoT edge computing, fleet telemetry pipeline, AIS-140 security">
+  <meta name="author" content="Exxomatic IoT Systems &amp; Software Solutions Pvt Ltd">
+  <link rel="canonical" href="technology.html">
+  
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Technology &amp; Architecture | Exxomatic">
+  <meta property="og:description" content="Inside the high-precision edge computing and cloud telemetry pipelines powering Exxomatic platforms.">
+  <meta property="og:image" content="images/logo.svg">
+
+  <link rel="icon" type="image/png" href="images/mainlogo.png">
+  <link rel="apple-touch-icon" href="images/mainlogo.png">
+  <link rel="stylesheet" href="css/style.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    "headline": "Exxomatic IoT Telematics Architecture & Security Protocols",
+    "author": {
+      "@type": "Organization",
+      "name": "Exxomatic"
+    }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo" aria-label="Exxomatic Home">
+        <img src="images/mainlogo.png" alt="Exxomatic Logo" width="38" height="38">
+        <span class="brand-logo-text">Exxomatic</span>
+      </a>
+
+      <nav aria-label="Main Navigation">
+        <ul class="nav-menu">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="products.html" class="nav-link">Products</a></li>
+          <li><a href="solutions.html" class="nav-link">Solutions</a></li>
+          <li><a href="technology.html" class="nav-link active">Technology</a></li>
+          <li><a href="about.html" class="nav-link">About Us</a></li>
+          <li><a href="contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <button class="btn btn-primary btn-sm header-cta" data-open-modal="demoModal">Book Live Demo</button>
+        <button class="mobile-toggle" id="mobileToggleBtn" aria-label="Open navigation menu" aria-expanded="false">
+          <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer" id="mobileDrawer">
+    <ul class="mobile-nav-list">
+      <li><a href="index.html" class="mobile-nav-link">Home <span>&rarr;</span></a></li>
+      <li><a href="products.html" class="mobile-nav-link">Products <span>&rarr;</span></a></li>
+      <li><a href="solutions.html" class="mobile-nav-link">Solutions <span>&rarr;</span></a></li>
+      <li><a href="technology.html" class="mobile-nav-link active">Technology <span>&rarr;</span></a></li>
+      <li><a href="about.html" class="mobile-nav-link">About Us <span>&rarr;</span></a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact <span>&rarr;</span></a></li>
+    </ul>
+    <button class="btn btn-primary btn-lg" style="width: 100%;" data-open-modal="demoModal">Request Platform Demo</button>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="section" style="padding-bottom: 2rem;">
+      <div class="container text-center" style="max-width: 820px; margin: 0 auto; text-align: center;">
+        <div class="badge badge-cyan">Engineering &amp; Cloud Systems</div>
+        <h1>The Architecture of <span class="text-gradient">Real-Time Precision</span></h1>
+        <p style="font-size: 1.15rem; margin-top: 1rem;">
+          Discover how Exxomatic combines ultra-low latency automotive micro-controllers with enterprise ASP.NET Core cloud ingestors to process millions of vehicle sensor signals every second.
+        </p>
+      </div>
+    </section>
+
+    <!-- ARCHITECTURE FLOWCHART / 4-TIER ARCHITECTURE -->
+    <section class="section" style="padding-top: 2rem;">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-purple">4-Stage Pipeline</div>
+          <h2>End-to-End Telemetry Ingestion Stack</h2>
+          <p>From the raw vehicle diagnostic bus to executive dashboards, every packet is validated, compressed, encrypted, and indexed in milliseconds.</p>
+        </div>
+
+        <div class="card-grid-4">
+          <!-- Stage 1 -->
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                <circle cx="9" cy="9" r="2"></circle>
+                <circle cx="15" cy="15" r="2"></circle>
+              </svg>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--cyan-primary); margin-bottom: 0.3rem;">STAGE 01 // EDGE</div>
+            <h3>Vehicle Micro-Edge</h3>
+            <p style="font-size: 0.88rem;">Hardware transceivers passively listen to CAN-J1939 bus streams. Raw ECU packets are normalized at 100Hz with zero engine interference.</p>
+          </div>
+
+          <!-- Stage 2 -->
+          <div class="card">
+            <div class="card-icon purple">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path>
+              </svg>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: #a78bfa; margin-bottom: 0.3rem;">STAGE 02 // SECURE SYNC</div>
+            <h3>Cellular Gateway</h3>
+            <p style="font-size: 0.88rem;">Packets are compressed using lightweight binary protocols and encrypted via AES-256 before transmission over dual 4G/LTE cellular channels.</p>
+          </div>
+
+          <!-- Stage 3 -->
+          <div class="card">
+            <div class="card-icon green">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path>
+              </svg>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--green-status); margin-bottom: 0.3rem;">STAGE 03 // CLOUD INGEST</div>
+            <h3>High-Throughput Workers</h3>
+            <p style="font-size: 0.88rem;">ASP.NET Core Worker Services ingest asynchronous telemetry into Redis distributed memory cache and clustered SQL backends.</p>
+          </div>
+
+          <!-- Stage 4 -->
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+                <polyline points="2 17 12 22 22 17"></polyline>
+                <polyline points="2 12 12 17 22 12"></polyline>
+              </svg>
+            </div>
+            <div style="font-family: var(--font-mono); font-size: 0.78rem; color: var(--cyan-primary); margin-bottom: 0.3rem;">STAGE 04 // AI ANALYTICS</div>
+            <h3>NavEdge UI &amp; WebSockets</h3>
+            <p style="font-size: 0.88rem;">Live vehicle markers, geofence breaches, driver fatigue scores, and fuel drain notifications push instantly to web and mobile apps.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVE TELEMETRY CODE STREAM VIEWER -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="card-grid-2">
+          <div>
+            <div class="badge badge-cyan">Real-Time Data Parsing</div>
+            <h2>Standardized Automotive <span class="text-gradient">Protocol Decoders</span></h2>
+            <p>Vehicles from different manufacturers speak different digital dialects. Exxomatic firmware automatically discovers and normalizes proprietary PGNs from BharatBenz, Tata Motors, Ashok Leyland, Mahindra, Volvo, and European commercial chassis.</p>
+
+            <div style="margin-top: 1.5rem; display: flex; flex-direction: column; gap: 1rem;">
+              <div class="metric-box">
+                <h4 style="font-size: 0.95rem; color: var(--cyan-primary); margin-bottom: 0.2rem;">SAE J1939 Electronic Control Units</h4>
+                <p style="font-size: 0.84rem;">Broadcast rate 250 kbps / 500 kbps, decoding EEC1 (Engine Speed), LFE (Fuel Economy), and ET1 (Coolant Temp).</p>
+              </div>
+              <div class="metric-box">
+                <h4 style="font-size: 0.95rem; color: var(--cyan-primary); margin-bottom: 0.2rem;">ISO 14229 Unified Diagnostic Services (UDS)</h4>
+                <p style="font-size: 0.84rem;">Active querying of active/pending Diagnostic Trouble Codes (DTCs), eliminating the need for expensive handheld scan tools.</p>
+              </div>
+              <div class="metric-box">
+                <h4 style="font-size: 0.95rem; color: var(--cyan-primary); margin-bottom: 0.2rem;">Offline Flash Ring Buffer Resilience</h4>
+                <p style="font-size: 0.84rem;">Stores up to 50,000 GPS/CAN records when traveling through rural or tunnel blind spots, auto-syncing upon reconnection.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Code Stream Simulation Box -->
+          <div style="background: #06090e; border: 1px solid var(--border-glow); border-radius: var(--radius-xl); padding: 1.8rem; box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);">
+            <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 0.8rem; margin-bottom: 1rem;">
+              <span style="font-family: var(--font-mono); font-size: 0.82rem; color: var(--cyan-primary);">&bull; LIVE CAN PROTOCOL STREAM</span>
+              <span class="badge badge-green" style="margin: 0; padding: 0.2rem 0.5rem; font-size: 0.7rem;">DECODING 100 Hz</span>
+            </div>
+
+            <pre style="font-family: var(--font-mono); font-size: 0.78rem; line-height: 1.6; color: #7dd3fc; overflow-x: auto;">
+<span style="color: #64748b;">// RAW CAN-J1939 PACKET INGESTION</span>
+PGN: 61444 [0x00F004] (Electronic Engine Controller 1)
+├── Priority: 3 | Source Address: 0x00 (Engine)
+├── SPN 190 (Engine Speed): <span style="color: #34d399;">1820.5 RPM</span>
+└── SPN 513 (Actual Engine Torque): <span style="color: #38bdf8;">64.0 %</span>
+
+PGN: 65262 [0x00FEEE] (Engine Temperature 1)
+├── SPN 110 (Coolant Temp): <span style="color: #a78bfa;">88°C (Normal)</span>
+└── SPN 175 (Engine Oil Temp): <span style="color: #a78bfa;">94°C</span>
+
+PGN: 65266 [0x00FEF2] (Fuel Economy Liquid)
+├── SPN 183 (Fuel Rate): <span style="color: #38bdf8;">14.8 L/h</span>
+└── SPN 184 (Instantaneous Fuel Economy): <span style="color: #34d399;">4.3 km/L</span>
+
+<span style="color: #10b981;">&check; Zero Active DTC Engine Faults Logged</span>
+<span style="color: #f59e0b;">&bull; GPS Geo-Coordinates: 17.4948° N, 78.3429° E (Accuracy &lt; 1.8m)</span>
+            </pre>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECURITY & ENTERPRISE COMPLIANCE -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <div class="badge badge-green">Enterprise Grade Security</div>
+          <h2>Built for Defense-Level <span class="text-gradient">Data Integrity</span></h2>
+          <p>Telematics data represents core commercial intelligence. Exxomatic treats every coordinate, driver identity, and telemetry packet with utmost confidentiality.</p>
+        </div>
+
+        <div class="card-grid-3">
+          <div class="card">
+            <div class="card-icon">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+                <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+              </svg>
+            </div>
+            <h3>End-to-End Cryptography</h3>
+            <p>Hardware keys stored in secure cryptographic silicon elements. All over-the-air cellular traffic is encrypted with AES-256 and TLS 1.3 mutual handshake.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon purple">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+              </svg>
+            </div>
+            <h3>AIS-140 Statutory Compliance</h3>
+            <p>Strict conformance with Automotive Industry Standard 140. Dual carrier profiles, physical anti-tamper enclosure sensors, and state control center forwarding.</p>
+          </div>
+
+          <div class="card">
+            <div class="card-icon green">
+              <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="9" cy="7" r="4"></circle>
+                <polyline points="16 11 18 13 22 9"></polyline>
+              </svg>
+            </div>
+            <h3>Fine-Grained RBAC &amp; JWT</h3>
+            <p>Role-based access permissions segregating fleet owners, regional supervisors, workshop maintenance crews, and individual drivers.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA BANNER -->
+    <section class="section" style="text-align: center;">
+      <div class="container">
+        <h2>Ready to Evaluate the <span class="text-gradient">Exxomatic Tech Stack</span>?</h2>
+        <p style="margin: 1rem auto 2rem auto; max-width: 600px;">Our lead solutions architect will conduct an architectural review and API integration sandbox demo with your engineering team.</p>
+        <button class="btn btn-primary btn-lg" data-open-modal="demoModal">Request Technical Deep Dive</button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="brand-logo" aria-label="Exxomatic Home">
+            <img src="images/mainlogo.png" alt="Exxomatic Logo" width="38" height="38">
+            <span class="brand-logo-text">Exxomatic</span>
+          </a>
+          <p>Next-generation IoT engineering, AI-driven automotive telematics, and enterprise mobility operating systems.</p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Products</h4>
+          <ul class="footer-links">
+            <li><a href="products.html#tabNavedge">NavEdge 2.0 Fleet OS</a></li>
+            <li><a href="products.html#tabEv">EV Telematics</a></li>
+            <li><a href="products.html#tabHardware">ExxoEdge Hardware</a></li>
+            <li><a href="products.html#tabCloud">ExxoCloud API Engine</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Industries</h4>
+          <ul class="footer-links">
+            <li><a href="solutions.html#logistics">Logistics &amp; Freight</a></li>
+            <li><a href="solutions.html#transit">Public EV Bus Transit</a></li>
+            <li><a href="solutions.html#coldchain">Cold Chain &amp; Pharma</a></li>
+            <li><a href="solutions.html#heavy">Heavy Machinery &amp; Mining</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="about.html">About Exxomatic</a></li>
+            <li><a href="technology.html">Architecture &amp; Security</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+            <li><a href="contact.html#support">Emergency 24/7 Desk</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Exxomatic IoT Systems &amp; Software Solutions Pvt Ltd. All rights reserved.</div>
+        <div style="display: flex; gap: 1.5rem;">
+          <a href="about.html">Privacy Policy</a>
+          <a href="about.html">Terms of Service</a>
+          <a href="technology.html">Security Protocol</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Book Demo Modal -->
+  <div class="modal-overlay" id="demoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-card">
+      <button class="modal-close-btn modal-close-trigger" aria-label="Close modal">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="badge badge-cyan">Exxomatic Platform Preview</div>
+      <h3 id="modalTitle" style="margin-bottom: 0.5rem;">Schedule a Live Demonstration</h3>
+      <p style="font-size: 0.92rem; margin-bottom: 1.5rem;">Experience real-time vehicle CAN telemetry, driver scorecards, and live route optimization with our solution architect.</p>
+
+      <form class="validated-form" id="demoForm">
+        <div class="form-group">
+          <label class="form-label" for="demoName">Full Name</label>
+          <input type="text" class="form-control" id="demoName" name="name" placeholder="e.g. Rajesh Kumar" required>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label class="form-label" for="demoEmail">Business Email</label>
+            <input type="email" class="form-control" id="demoEmail" name="email" placeholder="name@company.com" required>
+          </div>
+          <div class="form-group">
+            <label class="form-label" for="demoPhone">Contact Phone (Optional)</label>
+            <input type="tel" class="form-control" id="demoPhone" name="phone" placeholder="Optional contact number">
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label class="form-label" for="demoFleet">Fleet Size</label>
+          <select class="form-control" id="demoFleet" name="fleet">
+            <option value="1-20">1 - 20 Vehicles</option>
+            <option value="21-100" selected>21 - 100 Vehicles</option>
+            <option value="101-500">101 - 500 Vehicles</option>
+            <option value="500+">500+ Vehicles (Enterprise)</option>
+          </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">Confirm Demo Reservation</button>
+        <div class="form-feedback" role="alert"></div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
