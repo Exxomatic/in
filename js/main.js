@@ -13,6 +13,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initAccordion();
   initForms();
   initModal();
+  initLegalPage();
 });
 
 /**
@@ -389,3 +390,79 @@ function initModal() {
     }
   });
 }
+
+/**
+ * 10. Legal & Compliance Page Interactive Utilities
+ */
+function initLegalPage() {
+  const legalSections = document.querySelectorAll('.legal-section');
+  const tocLinks = document.querySelectorAll('.legal-toc-link');
+  const searchInput = document.getElementById('legalSearch');
+  const matchCounter = document.getElementById('legalSearchCount');
+  const printBtns = document.querySelectorAll('[data-action="print-legal"]');
+
+  // Print Document Trigger
+  printBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      window.print();
+    });
+  });
+
+  // TOC ScrollSpy with IntersectionObserver
+  if (legalSections.length > 0 && tocLinks.length > 0) {
+    const observerOptions = {
+      root: null,
+      rootMargin: '-15% 0px -75% 0px',
+      threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const currentId = entry.target.getAttribute('id');
+          tocLinks.forEach(link => {
+            const href = link.getAttribute('href');
+            if (href === `#${currentId}`) {
+              link.classList.add('active');
+            } else {
+              link.classList.remove('active');
+            }
+          });
+        }
+      });
+    }, observerOptions);
+
+    legalSections.forEach(sec => observer.observe(sec));
+  }
+
+  // Real-time Clause Search & Filter
+  if (searchInput && legalSections.length > 0) {
+    searchInput.addEventListener('input', () => {
+      const query = searchInput.value.trim().toLowerCase();
+      let matchCount = 0;
+
+      legalSections.forEach(section => {
+        const text = section.textContent.toLowerCase();
+        if (!query) {
+          section.classList.remove('search-hidden');
+          matchCount = legalSections.length;
+        } else if (text.includes(query)) {
+          section.classList.remove('search-hidden');
+          matchCount++;
+        } else {
+          section.classList.add('search-hidden');
+        }
+      });
+
+      if (matchCounter) {
+        if (!query) {
+          matchCounter.textContent = '';
+        } else {
+          matchCounter.textContent = `${matchCount} section${matchCount === 1 ? '' : 's'} found`;
+        }
+      }
+    });
+  }
+}
+
