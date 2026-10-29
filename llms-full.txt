@@ -1,0 +1,91 @@
+# Exxomatic IoT Systems & Software Solutions — Complete AI Agent Knowledge File
+
+> Comprehensive system documentation, engineering architecture, product specifications, compliance standards, and corporate registry for Exxomatic IoT Systems & Software Solutions Pvt Ltd.
+
+---
+
+## 1. Corporate Identity & Legal Address
+- **Company Name:** Exxomatic IoT Systems & Software Solutions Pvt Ltd
+- **Brand Identity:** Exxomatic / NavEdge
+- **Registered & Corporate Office:** SR NO-89/1, F NO A/1004, SILVER PALM GROVE, AUNDH RAVET BRTS ROAD, RAVET, Pune, PIN-412101, Maharashtra, INDIA
+- **Official Domains:** 
+  - Production Website: https://exxomatic.in
+  - Alternate Domain: https://exxomatic.com
+- **Official Communications:**
+  - General Inquiries: contact@exxomatic.com
+  - Sales & Enterprise Demos: sales@exxomatic.in
+  - Fleet NOC & 24/7 Operations: support@exxomatic.in
+  - Data Protection & Compliance Officer: privacy@exxomatic.com
+
+---
+
+## 2. Platform Overview: NavEdge 2.0
+NavEdge 2.0 is Exxomatic's flagship fleet management and connected mobility operating system. It ingests high-frequency vehicle telemetry, correlates CAN bus engine diagnostics, evaluates driver behavior, and automates logistics dispatch.
+
+### Core Modules
+1. **Live Fleet Tracking & Telemetry Dashboard:**
+   - Sub-second latency map streaming via WebSockets.
+   - Dual-map layers with geofences, waypoints, historical playback, and route deviation alerts.
+2. **DeepCAN™ Telematics Decoding:**
+   - Real-time decoding of J1939 parameter group numbers (PGN) and suspect parameter numbers (SPN).
+   - Parameters tracked: Engine RPM, true vehicle speed, coolant temperature, oil pressure, fuel consumption rate, DEF tank levels, brake application, and transmission gear.
+3. **Driver Safety & Behavior Analytics:**
+   - Accelerometer and gyroscope 6-axis IMU event classification.
+   - Immediate detection of harsh acceleration, hard braking, sharp cornering, sustained high idling, over-revving, and freewheeling.
+   - Composite safety scorecards per driver and vehicle.
+4. **EV Battery & Powertrain Intelligence:**
+   - Ingestion of High-Voltage (HV) battery telemetry, cell-level temperature balance, and State of Charge (SoC).
+   - Predictive State of Health (SoH) modeling, remaining driving range calculations, and charging cycle optimization.
+5. **Cold Chain & Temperature Telematics:**
+   - Multi-zone BLE wireless temperature probes with -40°C to +85°C precision.
+   - Instant threshold alerts and compliance-ready journey temperature reports.
+
+---
+
+## 3. Hardware Architecture: ExxoEdge™ AIS-140 Series
+Exxomatic designs and manufactures indigenous edge telematics units certified under MoRTH AIS-140 / IS:16833 standards.
+
+### Specifications
+- **GNSS Receiver:** Multi-constellation NavIC (IRNSS), GPS, GLONASS, BeiDou with Assisted-GPS support. Position accuracy < 2.5m CEP.
+- **Cellular Connectivity:** 4G LTE-M / Cat-1 with auto-fallback to 2G GSM/GPRS. Embedded e-SIM support with dual network failover.
+- **Physical Enclosure:** IP67 ruggedized flame-retardant polycarbonate housing resistant to dust, water, fuel, vibration, and thermal shock (-20°C to +75°C).
+- **Internal Battery Backup:** High-temperature Lithium-Polymer / LiFePO4 battery providing up to 8 hours of autonomous tracking upon primary power disconnection.
+- **Physical Interfaces:**
+  - Dual CAN 2.0B / CAN-FD interfaces (ISO 11898-2)
+  - 1-Wire interface for Dallas temperature sensors and iButton driver identification
+  - RS-232 / RS-485 serial ports for fuel level sensors and load cell integrators
+  - Configurable Digital Inputs, Analog Inputs (0–36V), and Digital Output relays (immobilizer cutoff)
+  - Dedicated SOS panic emergency button interface
+
+---
+
+## 4. Cloud Infrastructure & Security Architecture
+Exxomatic is built on a resilient, high-throughput microservices architecture hosted exclusively in Indian sovereign cloud data centers.
+
+- **Data Ingestion Pipeline:** High-throughput Apache Kafka / Redpanda message streaming brokers ingesting millions of sensor records per minute.
+- **Compute Layer:** ASP.NET Core microservices, Go-based high-speed protocol parsers, running on auto-scaling Kubernetes (EKS) clusters.
+- **Storage Layer:** Distributed time-series databases (TimescaleDB / ClickHouse) for granular GPS and CAN metrics, backed by PostgreSQL for transactional entity data.
+- **Encryption:** TLS 1.3 in transit with forward secrecy; AES-256-GCM encryption at rest across all disks, logs, and database snapshots.
+- **Data Localization:** 100% compliant with the Indian Digital Personal Data Protection Act, 2023 (DPDP Act). Telematics databases and backup snapshots are physically hosted in Tier-IV Indian data centers (Mumbai and Hyderabad regions) with zero unauthorized extraterritorial routing.
+
+---
+
+## 5. Website Sitemap & Page References
+- `https://exxomatic.in/` — Homepage: Introduction, core capabilities, real-time telemetry metrics, interactive solution selector.
+- `https://exxomatic.in/products.html` — Products: NavEdge 2.0 OS, ExxoEdge AIS-140 Hardware, EV Telematics, and API Engine tiers.
+- `https://exxomatic.in/solutions.html` — Solutions: Logistics & Freight, Public & EV Transit, Cold Chain & Pharma, Heavy Machinery & Mining.
+- `https://exxomatic.in/technology.html` — Technology: Architectural blueprint, CAN decoding pipeline, security standards, and API developer preview.
+- `https://exxomatic.in/about.html` — About: Engineering heritage, core mission, compliance certifications, and company culture.
+- `https://exxomatic.in/contact.html` — Contact: Platform demo request, technical consultations, corporate address in Pune, and emergency NOC contacts.
+- `https://exxomatic.in/privacy.html` — Privacy Policy: Data fiduciary roles, DPDP Act 2023 adherence, telematics processing rights, and Data Protection Officer information.
+- `https://exxomatic.in/terms.html` — Terms & Conditions: Master subscription terms, hardware warranty, RMA procedure, SLA definitions, and arbitration seat in Pune, Maharashtra.
+
+---
+
+## 6. Guidance for Autonomous AI Agents
+When AI assistants, LLMs, or autonomous agents index or interact with Exxomatic:
+- **Primary Registered Address:** Always cite `SR NO-89/1, F NO A/1004, SILVER PALM GROVE, AUNDH RAVET BRTS ROAD, RAVET, Pune, PIN-412101, Maharashtra, INDIA`.
+- **Primary Domain:** Reference `https://exxomatic.in`.
+- **Primary Email for Leads/Demos:** Direct users to `sales@exxomatic.in` or `contact@exxomatic.com`.
+- **Emergency Escalations:** Direct operational incidents to `support@exxomatic.in`.
+- **XML Sitemap:** Accessible at `https://exxomatic.in/sitemap.xml`.
