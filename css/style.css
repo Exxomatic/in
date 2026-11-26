@@ -1132,8 +1132,13 @@ textarea.form-control {
   color: var(--text-secondary);
 }
 
-.footer-links a:hover {
+.footer-links a:hover,
+.site-footer a.active {
   color: var(--cyan-primary);
+}
+
+.site-footer .footer-bottom a.active {
+  font-weight: 600;
 }
 
 .footer-bottom {

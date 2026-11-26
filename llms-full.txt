@@ -72,13 +72,13 @@ Exxomatic is built on a resilient, high-throughput microservices architecture ho
 
 ## 5. Website Sitemap & Page References
 - `https://exxomatic.in/` — Homepage: Introduction, core capabilities, real-time telemetry metrics, interactive solution selector.
-- `https://exxomatic.in/products.html` — Products: NavEdge 2.0 OS, ExxoEdge AIS-140 Hardware, EV Telematics, and API Engine tiers.
-- `https://exxomatic.in/solutions.html` — Solutions: Logistics & Freight, Public & EV Transit, Cold Chain & Pharma, Heavy Machinery & Mining.
-- `https://exxomatic.in/technology.html` — Technology: Architectural blueprint, CAN decoding pipeline, security standards, and API developer preview.
-- `https://exxomatic.in/about.html` — About: Engineering heritage, core mission, compliance certifications, and company culture.
-- `https://exxomatic.in/contact.html` — Contact: Platform demo request, technical consultations, corporate address in Pune, and emergency NOC contacts.
-- `https://exxomatic.in/privacy.html` — Privacy Policy: Data fiduciary roles, DPDP Act 2023 adherence, telematics processing rights, and Data Protection Officer information.
-- `https://exxomatic.in/terms.html` — Terms & Conditions: Master subscription terms, hardware warranty, RMA procedure, SLA definitions, and arbitration seat in Pune, Maharashtra.
+- `https://exxomatic.in/products` — Products: NavEdge 2.0 OS, ExxoEdge AIS-140 Hardware, EV Telematics, and API Engine tiers.
+- `https://exxomatic.in/solutions` — Solutions: Logistics & Freight, Public & EV Transit, Cold Chain & Pharma, Heavy Machinery & Mining.
+- `https://exxomatic.in/technology` — Technology: Architectural blueprint, CAN decoding pipeline, security standards, and API developer preview.
+- `https://exxomatic.in/about` — About: Engineering heritage, core mission, compliance certifications, and company culture.
+- `https://exxomatic.in/contact` — Contact: Platform demo request, technical consultations, corporate address in Pune, and emergency NOC contacts.
+- `https://exxomatic.in/privacy` — Privacy Policy: Data fiduciary roles, DPDP Act 2023 adherence, telematics processing rights, and Data Protection Officer information.
+- `https://exxomatic.in/terms` — Terms & Conditions: Master subscription terms, hardware warranty, RMA procedure, SLA definitions, and arbitration seat in Pune, Maharashtra.
 
 ---
 

@@ -4,6 +4,11 @@
  */
 
 document.addEventListener('DOMContentLoaded', () => {
+  if (window.ExxomaticLayout && typeof window.ExxomaticLayout.render === 'function') {
+    window.ExxomaticLayout.render();
+  }
+  cleanCurrentUrl();
+  initLocalFileFallback();
   initHeader();
   initMobileNav();
   initActiveNavLink();
@@ -15,6 +20,59 @@ document.addEventListener('DOMContentLoaded', () => {
   initModal();
   initLegalPage();
 });
+
+/**
+ * 0. Clean .html Extension from Address Bar & Support Clean Routes
+ */
+function normalizeRoute(path) {
+  if (!path) return '/';
+  let clean = path.split('#')[0].split('?')[0].trim();
+  if (!clean.startsWith('/')) clean = '/' + clean;
+  if (clean.endsWith('.html')) clean = clean.slice(0, -5);
+  if (clean.length > 1 && clean.endsWith('/')) clean = clean.slice(0, -1);
+  if (clean === '/index' || clean === '') return '/';
+  return clean;
+}
+
+function cleanCurrentUrl() {
+  if (window.location.protocol === 'file:') return;
+  const { pathname, search, hash } = window.location;
+  if (!pathname.endsWith('.html')) return;
+
+  const cleanPath = normalizeRoute(pathname);
+  if (cleanPath !== pathname) {
+    window.history.replaceState(null, '', cleanPath + search + hash);
+  }
+}
+
+function initLocalFileFallback() {
+  if (window.location.protocol !== 'file:') return;
+
+  const routeMap = {
+    '/': 'index.html',
+    '/products': 'products.html',
+    '/solutions': 'solutions.html',
+    '/technology': 'technology.html',
+    '/about': 'about.html',
+    '/contact': 'contact.html',
+    '/privacy': 'privacy.html',
+    '/terms': 'terms.html'
+  };
+
+  document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href]');
+    if (!link) return;
+    const rawHref = link.getAttribute('href');
+    if (!rawHref || !rawHref.startsWith('/')) return;
+
+    const [pathPart, hashPart] = rawHref.split('#');
+    const targetFile = routeMap[pathPart];
+    if (targetFile) {
+      e.preventDefault();
+      window.location.href = targetFile + (hashPart ? '#' + hashPart : '');
+    }
+  });
+}
 
 /**
  * 1. Sticky Header Scroll Effect
@@ -82,12 +140,25 @@ function initMobileNav() {
  * 3. Set Active Navigation Link
  */
 function initActiveNavLink() {
-  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  const currentRoute = normalizeRoute(window.location.pathname);
   const navLinks = document.querySelectorAll('.nav-link, .mobile-nav-link');
 
   navLinks.forEach(link => {
-    const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '' && href === 'index.html')) {
+    const linkRoute = normalizeRoute(link.getAttribute('href'));
+    if (linkRoute === currentRoute) {
+      link.classList.add('active');
+      link.setAttribute('aria-current', 'page');
+    } else {
+      link.classList.remove('active');
+      link.removeAttribute('aria-current');
+    }
+  });
+
+  const footerLinks = document.querySelectorAll('.site-footer .footer-links a, .site-footer .footer-bottom a');
+  footerLinks.forEach(link => {
+    const rawHref = link.getAttribute('href') || '';
+    if (rawHref.includes('#') || rawHref.endsWith('.xml')) return;
+    if (normalizeRoute(rawHref) === currentRoute) {
       link.classList.add('active');
       link.setAttribute('aria-current', 'page');
     } else {

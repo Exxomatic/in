@@ -19,13 +19,13 @@
 
 ## Key Web Pages & Documentation
 - [Home](https://exxomatic.in/): Corporate overview, core capabilities, real-time telemetry metrics, and client evaluation requests.
-- [Products](https://exxomatic.in/products.html): Comprehensive breakdown of NavEdge 2.0, ExxoEdge 4G/5G hardware models, EV Telematics suites, and API engine tiers.
-- [Solutions](https://exxomatic.in/solutions.html): Specialized fleet architectures for cold chain, public transit, heavy machinery, and freight logistics.
-- [Technology & Architecture](https://exxomatic.in/technology.html): 4-tier pipeline documentation including CAN bus edge decoding, Kafka streaming ingestion, microservices processing, and enterprise data security.
-- [About Exxomatic](https://exxomatic.in/about.html): Company history, mission, AIS-140 certifications, and engineering values.
-- [Contact & Demo Request](https://exxomatic.in/contact.html): Interactive consultation form, office location in Pune, and direct technical support channels.
-- [Privacy Policy](https://exxomatic.in/privacy.html): Full compliance disclosure under India DPDP Act 2023, data localization in Tier-IV Indian data centers, data retention, and grievance officer details.
-- [Terms & Conditions](https://exxomatic.in/terms.html): Enterprise Master Subscription Agreement, hardware RMA warranty, SLA guarantees, intellectual property, and arbitration jurisdiction in Pune, Maharashtra.
+- [Products](https://exxomatic.in/products): Comprehensive breakdown of NavEdge 2.0, ExxoEdge 4G/5G hardware models, EV Telematics suites, and API engine tiers.
+- [Solutions](https://exxomatic.in/solutions): Specialized fleet architectures for cold chain, public transit, heavy machinery, and freight logistics.
+- [Technology & Architecture](https://exxomatic.in/technology): 4-tier pipeline documentation including CAN bus edge decoding, Kafka streaming ingestion, microservices processing, and enterprise data security.
+- [About Exxomatic](https://exxomatic.in/about): Company history, mission, AIS-140 certifications, and engineering values.
+- [Contact & Demo Request](https://exxomatic.in/contact): Interactive consultation form, office location in Pune, and direct technical support channels.
+- [Privacy Policy](https://exxomatic.in/privacy): Full compliance disclosure under India DPDP Act 2023, data localization in Tier-IV Indian data centers, data retention, and grievance officer details.
+- [Terms & Conditions](https://exxomatic.in/terms): Enterprise Master Subscription Agreement, hardware RMA warranty, SLA guarantees, intellectual property, and arbitration jurisdiction in Pune, Maharashtra.
 
 ## Technical Specifications for AI & LLM Systems
 - **Standard Protocol Compliance:** MoRTH AIS-140, ARAI / ICAT certification standards.
